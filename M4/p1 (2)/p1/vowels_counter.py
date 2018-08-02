@@ -11,6 +11,6 @@ def main():
 		if(char[s]=='a' or char[s]=='e' or char[s]=='i' or char[s]=='o' or char[s]=='u'):
 			count=count+1
 	print(count)
-	
+
 if _name_=="_main_":
-main()
+	main()
