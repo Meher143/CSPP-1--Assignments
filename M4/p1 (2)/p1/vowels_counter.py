@@ -4,12 +4,12 @@
 #Number of vowels: 5
 def main():
     """string"""
-    s = input()
-    c = 0
-    for char in s:
-        if(char[s] == 'a','e','i','o','u'):
-            c = c+1
-    print(c)
+    str_ = input()
+    coun_ = 0
+    for char in str_:
+        if char in ('a', 'e', 'i', 'o', 'u'):
+            coun_ = coun_ + 1
+    print(coun_)
 
 if __name__ == "__main__":
 	main()
