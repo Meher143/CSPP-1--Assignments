@@ -1,6 +1,5 @@
  """string"""
 def main():
-    """string"""
     str_ = input()
     coun_ = 0
     while str_ is "bob":
