@@ -1,7 +1,7 @@
 """string"""
 def main():
    	"""string"""
-   	str0_ = input("")
+   	str_ = input("")
    	str1_ = 'bob'
    	coun_ = 0
    	for i in range(len(str_-2)):
