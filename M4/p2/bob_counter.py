@@ -1,4 +1,4 @@
- """string"""
+"""string"""
 def main():
     str_ = input()
     coun_ = 0
