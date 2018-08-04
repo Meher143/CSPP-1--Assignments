@@ -9,11 +9,11 @@ def main():
     Read number from the input, store it in variable num.
     '''
     num = int(input("enter a number"))
-    for num in range(1):
-    	string = ""
-    	if num%3 == 0:
-    		string = string + "Fizz"
-    		if num%5 ==0:
+    for num in range(100):
+        string = ""
+        if num%3 == 0:
+        	string = string + "Fizz"
+                if num%5 ==0:
     			string = string + "Buzz"
     			if num%3 == 0 and num%5 == 0:
     				string = string + str(num)
