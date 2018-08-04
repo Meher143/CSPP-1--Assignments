@@ -10,10 +10,10 @@ def main():
     '''
     int_input = int(input())
     while N > 0:
-    	N2 = N%10
-    	S = S*N2
-    	N = N//10
-    	if N3 >= 0:
+        N2 = N%10
+        S = S*N2
+        N = N//10
+        if N3 >= 0:
+        	print(s)
 if __name__ == "__main__":
     main()
-    
