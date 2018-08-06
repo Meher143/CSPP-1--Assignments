@@ -5,7 +5,10 @@
 
 
 def square(x):
-	return x*x
+    '''
+    x: int or float.
+    '''
+    return x*x
     
 # Correct
 
