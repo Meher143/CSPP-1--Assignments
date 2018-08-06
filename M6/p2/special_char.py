@@ -10,11 +10,11 @@ def main():
     str_input = input()
     str_result = ""
     for letter in str_input:
-        if letter is "!@#$%^&*()_+":
+        if letter in "!@#$%^&*()_+":
             letter = " "
             str_result += letter
         else:
-    		str_result += letter
-    	print(str_result)
+    	    str_result += letter
+    print(str_result)
 if __name__ == "__main__":
     main()

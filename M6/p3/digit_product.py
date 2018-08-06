@@ -14,6 +14,6 @@ def main():
         S = S*N1
         N = N//10
         if N3 >= 0:
-        	print(S)
+    print(S)
 if __name__ == "__main__":
     main()
