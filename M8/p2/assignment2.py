@@ -11,6 +11,7 @@ def sumofdigits(n_1):
     if n_1 > 0:
         return n_1%10+sumofdigits(n_1//10)
     return 0
+    
 def main():
     ''' To add the given numbers'''
     a_1 = input()
