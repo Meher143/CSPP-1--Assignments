@@ -32,14 +32,16 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     def eachline(data1):
-        
+        if "follows" not in data1:
+            dic = {}
+            return dic
         string_1 = data1.split(" follows ")
         list1 = []
         list1.append(string_1[0])
         string_1.remove(string_1[0])
         value = string-1[0].split(",")
         list1.append(value)
-        return list1
+        
     l_1 = data.splitlines()
     #print("split",splitline)
     list_key = []
