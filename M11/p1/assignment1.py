@@ -25,20 +25,15 @@ def get_word_score(word, n):
     'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
     } 
-    l_1 =len(word)
+    l_1 = len(word)
     score = 0
     for i in word:
         if i in SCRABBLE_LETTER_VALUES:
             score += SCRABBLE_LETTER_VALUES[i]
     score = score*l_1
-    if n == word:
+    if l_1 == word:
         score = score+50
     return score
-
-
-
-
-
 def main():
     '''
     Main function for the given problem
