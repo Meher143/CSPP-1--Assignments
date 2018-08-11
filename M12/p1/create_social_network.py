@@ -38,16 +38,15 @@ def create_social_network(data):
         s_1 = data1.split(" follows ")
         list1 = []
         list1.append(s_1[0])
-        string_1.remove(s_1[0])
-        value = string-1[0].split(",")
+        s_1.remove(s_1[0])
+        value = s_1[0].split(",")
         list1.append(value)
         return list1
-    l_1 = data.splitlines()
-    #print("split",splitline)
+    l = data.splitlines()
     list_key = []
     list_value = []
     dic = {}
-    for i in l_1:
+    for i in l:
         list_key_val = eachline(i)
         if list_key_val == dic:
             return list_key_val
