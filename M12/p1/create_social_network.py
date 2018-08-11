@@ -42,11 +42,11 @@ def create_social_network(data):
         value = s_1[0].split(",")
         list1.append(value)
         return list1
-    l = data.splitlines()
+    l_ = data.splitlines()
     list_key = []
     list_value = []
     dic = {}
-    for i in l:
+    for i in l_:
         list_key_val = eachline(i)
         if list_key_val == dic:
             return list_key_val
