@@ -27,10 +27,10 @@ def get_word_score(word, n):
     } 
     l_1 =len(word)
     for i in word:
-        if i is in SCRABBLE_LETTER_VALUES:
+        if i in SCRABBLE_LETTER_VALUES:
             score += SCRABBLE_LETTER_VALUES[i]
             score = score*l_1
-    if n==word:
+    if n == word:
         score = score+50
     return score
 
