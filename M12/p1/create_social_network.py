@@ -41,7 +41,7 @@ def create_social_network(data):
         string_1.remove(string_1[0])
         value = string-1[0].split(",")
         list1.append(value)
-        
+        return list1
     l_1 = data.splitlines()
     #print("split",splitline)
     list_key = []
