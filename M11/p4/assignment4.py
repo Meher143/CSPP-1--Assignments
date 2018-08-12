@@ -14,12 +14,12 @@ def calculateHandlen(hand):
         values +=hand[i]
     return values
 def main():
-    n = input()
+    n_1 = input()
     adict = {}
-    for i in range(int(n)):
+    for i in range(int(n_1)):
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
+        l_1 = data.split()
+        adict[l_1[0]] = int(l_1[1])
     print(calculateHandlen(adict))
 if __name__ == "__main__":
     main()
