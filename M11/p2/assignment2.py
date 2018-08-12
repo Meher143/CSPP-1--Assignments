@@ -29,6 +29,5 @@ def main():
     data1 = input()
     print(update_hand(adict, data1))
 
-
 if __name__ == "__main__":
     main()
