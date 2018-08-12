@@ -11,15 +11,15 @@ def calculateHandlen(hand):
     """
     values = 0
     for i in hand:
-    	values +=hand[i]
+        values +=hand[i]
     return values
 def main():
-	n = input()
-	adict = {}
-	for i in range(int(n)):
-		data = input()
-		l = data.split()
-		adict[l[0]] = int(l[1])
-	print(calculateHandlen(adict))
+    n = input()
+    adict = {}
+    for i in range(int(n)):
+        data = input()
+        l = data.split()
+        adict[l[0]] = int(l[1])
+    print(calculateHandlen(adict))
 if __name__ == "__main__":
-	main()
+    main()
