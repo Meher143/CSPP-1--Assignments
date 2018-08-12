@@ -9,6 +9,7 @@ def calculateHandlen(hand):
     hand: dictionary (string int)
     returns: integer
     """
+    values = 0
     for i in hand:
     	values +=hand[i]
     return values
