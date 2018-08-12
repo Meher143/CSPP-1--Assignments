@@ -10,9 +10,8 @@ def calculateHandlen(hand):
     returns: integer
     """
     if i in hand:
-    	values +=i
-    	len = values
-    return len
+    	values +=hand[i]
+    return values
     
 
 def main():
