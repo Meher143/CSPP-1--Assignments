@@ -18,8 +18,8 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-   meher = hand
-   for i in word:
+    meher = hand
+    for i in word:
    		if i in hand:
    			meher[i] = meher[i] - 1
    	return meher
