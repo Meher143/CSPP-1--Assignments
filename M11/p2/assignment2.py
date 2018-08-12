@@ -18,20 +18,20 @@ def updateHand(hand, word):
     hand: dictionary (string -> int)    
     returns: dictionary (string -> int)
     """
-    meher = hand
+    meher_1 = hand
     for i in word:
         if i in hand:
-            meher[i] = meher[i] - 1
-    return meher
+            meher_1[i] = meher_1[i] - 1
+    return meher_1
     
 
 def main():
-    n=input()
+    n_1=input()
     adict={}
-    for i in range(int(n)):
+    for i in range(int(n_1)):
         data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
+        l_1=data.split()
+        adict[l[0]]=int(l_1[1])
     data1=input()
     print(updateHand(adict,data1))
         
