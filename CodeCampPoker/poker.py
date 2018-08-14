@@ -19,13 +19,19 @@ def is_straight(hand):
     for card in hand:
     	temp_lst.append(card[0])
     temp_lst.sort()
-    for each in range (len(temp_lst)-1):
+    for each in range(len(temp_lst)-1):
     	if (temp_lst[each] - temp_lst[each+1]) != -1:
     		return False
     return True
-
-
-
+    dic = {'A':14,'2':2,'3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13}
+    list_1 = []
+    cont = 0
+    for card in hand:
+        list_1.append(dic[card[0]])
+    list_1.sort()
+    for each in range(len(list_1)-1):
+     	if (list_1[each] - list_1[each+1]) != -1:
+    		return False
 
 def is_flush(hand):
     '''
