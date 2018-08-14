@@ -17,11 +17,11 @@ def is_straight(hand):
     dictionary = {'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13,'A':14}
     temp_lst =[]
     for card in hand:
-    	temp_lst.append(card[0])
+        temp_lst.append(card[0])
     temp_lst.sort()
     for each in range(len(temp_lst)-1):
-    	if (temp_lst[each] - temp_lst[each+1]) != -1:
-    		return False
+        if (temp_lst[each] - temp_lst[each+1]) != -1:
+            return False
     return True
     dic = {'A':14,'2':2,'3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13}
     list_1 = []
@@ -30,8 +30,8 @@ def is_straight(hand):
         list_1.append(dic[card[0]])
     list_1.sort()
     for each in range(len(list_1)-1):
-     	if (list_1[each] - list_1[each+1]) != -1:
-    		return False
+        if (list_1[each] - list_1[each+1]) != -1:
+            return False
 
 def is_flush(hand):
     '''
@@ -44,7 +44,7 @@ def is_flush(hand):
     '''
     suit_set = set()
     for card in hand:
-    	suit_set.add(card[1])
+        suit_set.add(card[1])
     return (len(suit_set)==1)
     
 
@@ -73,11 +73,11 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-    	return 3
+        return 3
     if is_flush(hand):
-    	return 2
+        return 2
     if is_straight(hand):
-    	return 1
+        return 1
     return 0
 
 def poker(hands):
