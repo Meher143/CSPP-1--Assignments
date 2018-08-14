@@ -74,7 +74,6 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
 
-    return 1
 
 def poker(hands):
     '''
