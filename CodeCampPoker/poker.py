@@ -21,13 +21,9 @@ def is_straight(hand):
         list_1.append(dic[card[0]])
     list_1.sort()
     for i in range(len(list_1)-1):
-            l = list_1[i+1] - list_1[i]
-            if (l == 1):
-                cont = cont + 1
-    if cont == (len(list_1) - 1):
-        return True
-    else:
-        return False
+        if (list_1[i+1] - list_1[i]) == -1:
+            return False
+    return True
 
 def is_flush(hand):
     '''
@@ -54,16 +50,13 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-    max_1 = 0
     if is_straight(hand) and is_flush(hand):
-        max_1 = 3
-    elif is_flush(hand):
-        max_1 = 2
-    elif is_straight(hand):
-        max_1 = 1
-    else: 
-        max_1 = 0
-    return max_1
+        return 3
+    if is_flush(hand):
+        return 2
+    if is_straight(hand):
+        return 1
+    return 0
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
