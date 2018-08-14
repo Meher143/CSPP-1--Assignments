@@ -50,13 +50,17 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
+    maximum = 0
     if is_straight(hand) and is_flush(hand):
-        return 3
-    if is_flush(hand):
-        return 2
-    if is_straight(hand):
-        return 1
-    return 0
+        maximum = 3
+    elif is_flush(hand):
+        maximum = 2
+    elif is_straight(hand):
+        maximum = 1
+    else: 
+        maximum = 0
+    return maximum
+
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
