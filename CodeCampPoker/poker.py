@@ -21,7 +21,7 @@ def is_straight(hand):
         list_1.append(dic[card[0]])
     list_1.sort()
     for i in range(len(list_1)-1):
-        if (list_1[i+1] - list_1[i]) == -1:
+        if (list_1[i+1] - list_1[i]) == 1:
             return False
     return True
 
