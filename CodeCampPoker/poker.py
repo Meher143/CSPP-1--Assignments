@@ -49,7 +49,7 @@ def poker(hands):
     '''
     return max(hands, key=hand_rank)
 
-if __name__ == "__main__":
+if __name__ == "__ main __":
     # read the number of test cases
     COUNT = int(input())
     # iterate through the test cases to set up hands list
