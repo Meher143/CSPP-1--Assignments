@@ -1,9 +1,6 @@
 '''
     Document Distance - A detailed description is given in the PDF
 '''
-'''
-    Document Distance - A detailed description is given in the PDF
-'''
 import math
 import re
 def word_list(string):
@@ -36,10 +33,10 @@ def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
-     stopwords = {}
+    stopwords = {}
     with open(filename, 'r') as filename:
-        for line in filename:
-            stopwords[line.strip()] = 0
+    for line in filename:
+        stopwords[line.strip()] = 0
     return stopwords
 
 def main():
