@@ -8,10 +8,11 @@ def main():
     '''
     Read number from the input, store it in variable num.
     '''
-    num = int(input("enter a number"))
+    num = int(input())
     for num in range(num+1):
         if num%3 == 0 and num%5 ==0:
-            print("Fizz/n Buzz")
+            print("Fizz")
+            print("Buzz")
         elif num%5 ==0:
             print("Buzz")
         elif num%3 == 0:
