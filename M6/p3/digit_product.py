@@ -1,8 +1,8 @@
 '''
 Given a  number int_input, find the product of all the digits
 example: 
-	input: 123
-	output: 6
+    input: 123
+    output: 6
 '''
 def main():
     '''
@@ -29,3 +29,4 @@ def main():
         print(fou)
 if __name__ == "__main__":
     main()
+    
