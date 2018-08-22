@@ -14,7 +14,7 @@ def main():
             letter = " "
             str_result += letter
         else:
-    	    str_result += letter
+            str_result += letter
     print(str_result)
 if __name__ == "__main__":
     main()
