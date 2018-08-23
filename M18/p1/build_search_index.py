@@ -33,21 +33,29 @@ def load_stopwords(filename):
     return stopwords
 
 
-def word_list(text):
+def word_list(doc):
     '''
         Change case to lower and split the words using a SPACE
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    word_list = ''
-    for i in word_list:
-        for j in i:
-            if j not in "!@#$%^&*()_+ and 23456789":
-                word_list += 1
-        for i in word_list.lower().split(" "):
-            return word_list
 
-
+    words = []
+    str1 = ''
+    str2 = ""
+    doc = [i.lower() for i in doc]
+    for i in doc:
+        k = i.split(" ")
+        str2 = ''
+        for j in k:
+            str1 = ''
+            for temp in j:
+                if temp.isalpha() == False:
+                    temp = ''
+                str1 = str1 + temp
+            str2 = str2 + str1 + " "
+        words.append(str2)
+    return words
 
 def build_search_index(docs):
     '''
@@ -65,14 +73,22 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    dict_1 = {}
-    for word in word_list:
-        if word not in load_stopwords():
-            return dict_1
-
+    search_index = dict()
+    docs1 = word_list(docs)
+    stopwords = load_stopwords('stopwords.txt')
+    text = [i.split() for i in docs1]
+    text1 = [j for i in text for j in i if j not in stopwords]
+    for text_ele in text1:
+        list1 = []
+        for doc_id, doc_ele in enumerate(text):
+            if text_ele in doc_ele:
+                list1.append((doc_id, doc_ele.count(text_ele)))
+            search_index[text_ele] = list1
+    return search_index
 
 # helper function to print the search index
 # use this to verify how the search index looks
+
 def print_search_index(index):
     '''
         print the search index
@@ -100,3 +116,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
