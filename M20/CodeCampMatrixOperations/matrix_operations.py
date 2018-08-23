@@ -7,6 +7,21 @@ def mult_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     pass
+    if len(m1[0]) == len(m2):
+        Result_1 = []
+        for i in range(len(m1)):
+            a = []
+            for j in range(len(m2[0])):
+                Res_1 = 0
+                for k in range(len(m2)):
+                    Res_1 += m1[i][k] * m2[k][j]
+                a.append(Res_1)
+            Result_1.append(a)
+        return Result_1
+    else:
+        print("Error: Matrix shapes invalid for mult")
+        return None
+
 
 def add_matrix(m1, m2):
     '''
@@ -16,8 +31,19 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    pass
-
+    matrix_result = []
+    if len(m1) != len(m2):
+        print("Error: Matrix shapes invalid for addition")
+        return
+    for i,j in zip(m1,m2):
+        if len(i) != len(j):
+            print("Error: Matrix shapes invalid for addition")
+    for i in range(len(m1)):
+        li_st = []
+        for j in range(len(m1[i])):
+            li_st.append(m1[i][j] + m2[i][j])
+        matrix_result.append(li_st)
+    return matrix_result
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -26,17 +52,33 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    pass
+    rows,columns = [int(i) for i in input().split(",")]
+    matrix = []
+    for i in range(rows):
+        lst=[int(i) for i in input().split(" ")]
+        if len(lst)!= columns:
+            print("Error: Invalid input for the matrix")
+            return None
+    matrix.append(lst)
+    return matrix
+        
 
 def main():
     # read matrix 1
+    m1 = read_matrix()
 
     # read matrix 2
+    m2 = read_matrix()
 
     # add matrix 1 and matrix 2
+    print(add_matrix(m1,m2))
 
     # multiply matrix 1 and matrix 2
-    pass
+    print(mult_matrix(m1,m2))
+
+
 
 if __name__ == '__main__':
     main()
+
+
