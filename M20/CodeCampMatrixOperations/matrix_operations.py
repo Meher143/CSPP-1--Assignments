@@ -34,10 +34,11 @@ def add_matrix(m1, m2):
     matrix_result = []
     if len(m1) != len(m2):
         print("Error: Matrix shapes invalid for addition")
-        return
+        return None
     for i,j in zip(m1,m2):
         if len(i) != len(j):
             print("Error: Matrix shapes invalid for addition")
+            return None
     for i in range(len(m1)):
         li_st = []
         for j in range(len(m1[i])):
@@ -69,14 +70,9 @@ def main():
 
     # read matrix 2
     m2 = read_matrix()
-
-    # add matrix 1 and matrix 2
-    print(add_matrix(m1,m2))
-
-    # multiply matrix 1 and matrix 2
-    print(mult_matrix(m1,m2))
-
-
+    if(matrix_1 != None and matrix_2 != None):
+        print(add_matrix(matrix_1, matrix_2))
+        print(mult_matrix(matrix_1, matrix_2))
 
 if __name__ == '__main__':
     main()
