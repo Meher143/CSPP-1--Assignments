@@ -66,10 +66,10 @@ def read_matrix():
 
 def main():
     # read matrix 1
-    m1 = read_matrix()
+    matrix_1 = read_matrix()
 
     # read matrix 2
-    m2 = read_matrix()
+    matrix_2 = read_matrix()
     if(matrix_1 != None and matrix_2 != None):
         print(add_matrix(matrix_1, matrix_2))
         print(mult_matrix(matrix_1, matrix_2))
