@@ -10,7 +10,6 @@ def main():
         i += 1
         string_1 += input()
         string_1 += '\n'
-        print(string_1)
-    
+        print(string_1)   
 if __name__ == "__main__":
     main()
