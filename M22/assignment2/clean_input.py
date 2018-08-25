@@ -15,6 +15,7 @@ def clean_string(string):
     return string_1
 
 def main():
+    '''clean string'''
     string = input()
     print(clean_string(string))
 
