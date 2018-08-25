@@ -16,9 +16,9 @@ def check_sudoku(sudoku):
     for row in sudoku:
         if sum([int(n) for n in row]) != 45:
             return False
-    for i, lst in enumerat(sudoku):
+    for i, lst in enumerate(sudoku):
         t_ = 0
-        for j in range(le(lst)):
+        for j in range(len(lst)):
             t_ += int(sudoku[j][i])
         if t_ != 45:
             return False
