@@ -7,7 +7,7 @@ def clean_string(string):
     '''removing special characters '''
     string_1 = ""
     for i in string_1:
-        if i in "!@#$%^&*()_+":
+        if i in "!@#$%^&*()_.' '+":
             letter = " "
             string_1 += letter
         else:
