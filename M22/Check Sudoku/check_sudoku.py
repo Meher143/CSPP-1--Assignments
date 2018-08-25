@@ -18,7 +18,7 @@ def check_sudoku(sudoku):
             return False
     for i, lst in enumerat(sudoku):
         t_ = 0
-        for j in range(len(lst)):
+        for j in range(le(lst)):
             t_ += int(sudoku[j][i])
         if t_ != 45:
             return False
