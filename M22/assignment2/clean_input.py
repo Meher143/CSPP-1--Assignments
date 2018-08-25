@@ -14,7 +14,6 @@ def clean_string(string):
             string_1 += letter
     return string_1
 
-
 def main():
     string = input()
     print(clean_string(string))
