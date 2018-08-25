@@ -13,5 +13,5 @@ def main():
         print(string_1)
     
 
-if __name__ == "__main__":
+if __ name __ == "__ main __":
     main()
