@@ -4,11 +4,11 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-	'''removing special characters '''
-    string_1 = ''
+    '''removing special characters '''
+    string_1 = ""
     for i in string_1:
-    	if i in "!@#$%^&*()_+":
-    		letter = " "
+        if i in "!@#$%^&*()_+":
+            letter = " "
             string_1 += letter
         else:
             string_1 += letter
