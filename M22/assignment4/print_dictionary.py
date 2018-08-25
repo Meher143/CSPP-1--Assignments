@@ -5,17 +5,16 @@ the key and frequency with a SPACE - SPACE.
 '''
 
 def print_dictionary(dictionary):
-	'''print dictionary '''
-    dictionary = {'lorem': 2, 'ipsum': 2, 'porem': 2}
-    print('lorem': 2, 'ipsum': 2, 'porem': 2)
-    
-
-
-
+    ''' print the dictionary in the specified format'''
+    dict_keys = list(dictionary.keys())
+    for key in sorted(dict_keys):
+        print("{} - {}".format(key, dictionary[key]))
 
 def main():
+    '''gets input form the user '''
     dictionary = eval(input())
     print_dictionary(dictionary)
 
 if __name__ == '__main__':
     main()
+
