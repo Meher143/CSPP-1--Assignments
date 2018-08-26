@@ -1,3 +1,4 @@
+"""assignment 1"""
 # The Message class contains methods that could be used to apply a
 # cipher to a string, either to encrypt or to decrypt a message
 # (since for Caesar codes this is the same action).
@@ -126,6 +127,5 @@ def main():
     data = Message(input())
     data.get_message_text()
     print(data.apply_shift(int(input())))
-
 if __name__ == "__main__":
     main()
